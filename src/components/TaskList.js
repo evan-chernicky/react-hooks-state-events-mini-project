@@ -1,15 +1,7 @@
-import React, {useState} from "react";
+import React from "react";
 import Task from './Task.js'
 
-function TaskList({tasks}) {
-
-  const [taskList, setTaskList] = useState(tasks)
-
-  function onDeleteTask(e) {
-
-    console.log(e)
-
-  }
+function TaskList({tasks, onDeleteTask}) {
 
   const renderTasks = tasks.map(task => <Task taskdata={task} onDeleteTask={onDeleteTask} key={task.text}/>  )
 

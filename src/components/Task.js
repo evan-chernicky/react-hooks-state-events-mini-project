@@ -6,7 +6,7 @@ function Task({taskdata, onDeleteTask}) {
     <div className="task">
       <div className="label">{taskdata.category}</div>
       <div className="text">{taskdata.text}</div>
-      <button onClick={onDeleteTask} className="delete">X</button>
+      <button onClick={() => onDeleteTask(taskdata.text)} className="delete">X</button>
     </div>
   );
 }
