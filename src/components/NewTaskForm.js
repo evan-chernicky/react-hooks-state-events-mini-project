@@ -13,11 +13,9 @@ function NewTaskForm({categories, onTaskFormSubmit }) {
 
     e.preventDefault()
 
-    const category = e
-
-    console.log(category)
-
     onTaskFormSubmit(details, currentCategory )
+
+    setDetails('')
   
 
   }

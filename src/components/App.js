@@ -19,11 +19,14 @@ function App() {
 
   }
 
-  function onTaskFormSubmit(details) {
+  function onTaskFormSubmit(details, currentCategory) {
 
-    console.log('test')
+    const newTasks = {
+      'text': details,
+      'category': currentCategory
+    }
 
-
+    setTasks([...tasks, newTasks])
 
   }
 
