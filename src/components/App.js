@@ -19,6 +19,14 @@ function App() {
 
   }
 
+  function onTaskFormSubmit(details) {
+
+    console.log('test')
+
+
+
+  }
+
 
   function onFilterCategories(category) {
 
@@ -39,8 +47,8 @@ function App() {
   return (
     <div className="App">
       <h2>My tasks</h2>
-      <CategoryFilter categories={CATEGORIES} onFilterCategories={onFilterCategories} />
-      <NewTaskForm />
+      <CategoryFilter categories={CATEGORIES} onFilterCategories={onFilterCategories} setCategory={category}/>
+      <NewTaskForm categories={CATEGORIES} onTaskFormSubmit={onTaskFormSubmit} />
       <TaskList tasks={filteredTasks} onDeleteTask={onDeleteTask} />
     </div>
   );
